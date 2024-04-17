@@ -107,4 +107,7 @@ function delay(ms) {
 
 if (window.location.pathname === '/applicant/vacancy_response' || window.location.pathname.includes('/vacancy/') || window.location.search.includes('continue=true')) {
     autoResponse()
+
+	// if script didn't start for some reason
+	setInterval(()=>autoResponse(),10000)
 } 
