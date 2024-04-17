@@ -54,11 +54,6 @@ async function autoResponse() {
           	console.log('deleted');
             const btn = document.querySelector('[data-qa="vacancy__blacklist-show-add"]')
 
-          // какие-то баги на hh.ru, для верности
-            btn.click()
-          	await delay(1200)
-            btn.click()
-          	await delay(1200)
             btn.click()
           	await delay(1200)
 
