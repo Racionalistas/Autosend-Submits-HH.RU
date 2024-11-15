@@ -14,7 +14,7 @@ async function handlerCoverLetter() {
         document.querySelector('[data-qa="vacancy-response-letter-toggle"]').click();
         await delay(50)
 
-        messageArea = document.querySelector(".magritte-textarea-native___w-czf_2-0-50");
+        messageArea = document.querySelector(".magritte-textarea-native___w-czf_2-0-57");
         messageArea.textContent = coverLetter;
 
         btnSubmit = document.querySelector('[data-qa="vacancy-response-letter-submit"]');
@@ -29,7 +29,7 @@ async function handlerCoverLetter() {
 
         btnSubmit = document.querySelector('[data-qa="vacancy-response-submit-popup"]');
     } else {
-        messageArea = document.querySelector(".magritte-textarea-native___w-czf_2-0-50");
+        messageArea = document.querySelector(".magritte-textarea-native___w-czf_2-0-57");
         messageArea.textContent = coverLetter;
 
         var evt = document.createEvent('HTMLEvents');
