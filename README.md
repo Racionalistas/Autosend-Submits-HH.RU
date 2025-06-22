@@ -12,7 +12,7 @@
 
 1. **Подготовка**: 
     - Установите расширение https://chromewebstore.google.com/detail/scripty-javascript-inject/milkbiaeapddfnpenedfgbfdacpbcbam 
-    - Установите скрипт https://scripty.abhisheksatre.com/#/share/script_1731692831097 или перекопируйте вручную
+    - Установите скрипт https://scripty.abhisheksatre.com/#/share/script_mc7btte6y4jos4 или перекопируйте вручную
 2. **Настройка**:
     - В переменную `coverLetter` вставьте текст вашего сопроводительного письма.
 3. **Запуск**:
