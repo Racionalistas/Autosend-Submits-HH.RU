@@ -1,6 +1,6 @@
 let coverLetter = `...`;
 
-const linkWithFilters = `...`
+const linkWithFilters = `...`;
 
 let delayTimeMS = 700;
 
@@ -26,11 +26,11 @@ async function handlerCoverLetter() {
     await delay(delayTimeMS);
 
     let messageArea;
-    let btnSubmit
+    let btnSubmit;
 
     if (document.querySelector('[data-qa="vacancy-response-letter-toggle"]')) {
         document.querySelector('[data-qa="vacancy-response-letter-toggle"]').click();
-        await delay(50)
+        await delay(50);
 
         messageArea = document.querySelector(".magritte-textarea-native___w-czf_2-0-57");
         messageArea.textContent = coverLetter;
@@ -38,7 +38,7 @@ async function handlerCoverLetter() {
         btnSubmit = document.querySelector('[data-qa="vacancy-response-letter-submit"]');
     }
     else if (document.querySelector('[data-qa="vacancy-response-popup-form-letter-input"]')) {
-        messageArea = document.querySelector('[data-qa="vacancy-response-popup-form-letter-input"]')
+        messageArea = document.querySelector('[data-qa="vacancy-response-popup-form-letter-input"]');
         triggerInputChange(messageArea, coverLetter);
 
         var evt = document.createEvent('HTMLEvents');
@@ -57,7 +57,7 @@ async function handlerCoverLetter() {
         btnSubmit = document.querySelector('[data-qa="vacancy-response-submit-popup"]');
     }
 
-    await delay(50)
+    await delay(50);
     btnSubmit.click();
 
     await delay(delayTimeMS);
@@ -70,33 +70,33 @@ async function autoResponse() {
     if (vacancies.length) {
         if (window.location.search.includes('delete=true')) {
             console.log('deleted');
-            const btn = document.querySelector('[data-qa="vacancy__blacklist-show-add"]')
+            const btn = document.querySelector('[data-qa="vacancy__blacklist-show-add"]');
 
-            btn.click()
-            await delay(1200)
+            btn.click();
+            await delay(1200);
 
-            const block = document.querySelector('[data-qa="vacancy__blacklist-menu-add-vacancy"]')
-            block.click()
+            const block = document.querySelector('[data-qa="vacancy__blacklist-menu-add-vacancy"]');
+            block.click();
             window.location.href = linkWithFilters + '&continue=true';
             await delay(delayTimeMS);
         }
 
         vacancies[0].click();
 
-        vacancies[0].parentElement.parentElement.parentElement.parentElement.scrollIntoView()
+        vacancies[0].parentElement.parentElement.parentElement.parentElement.scrollIntoView();
 
-        await delay(delayTimeMS + 1000)
-        const reloc = document.querySelector('[data-qa="relocation-warning-confirm"]')
+        await delay(delayTimeMS + 1000);
+        const reloc = document.querySelector('[data-qa="relocation-warning-confirm"]');
         if (reloc) {
             reloc.click();
-            await delay(delayTimeMS)
+            await delay(delayTimeMS);
         }
 
         if (document.querySelector('[data-qa="employer-asking-for-test"]')) {
-            console.log('employer test found, return and blacklist')
+            console.log('employer test found, return and blacklist');
             window.location.href = linkWithFilters + '&continue=true&delete=true';
         } else {
-            console.log('vacancie is ok, proceed to cover letter')
+            console.log('vacancie is ok, proceed to cover letter');
             await handlerCoverLetter();
         }
     } else {
@@ -124,8 +124,8 @@ function delay(ms) {
 }
 
 if (window.location.pathname === '/applicant/vacancy_response' || window.location.pathname.includes('/vacancy/') || window.location.search.includes('continue=true')) {
-    autoResponse()
+    autoResponse();
 
     // if script didn't start for some reason
-    setInterval(() => autoResponse(), 10000)
-} 
+    setInterval(() => autoResponse(), 10000);
+}
