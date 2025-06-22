@@ -4,6 +4,24 @@ const linkWithFilters = `...`
 
 let delayTimeMS = 700;
 
+function triggerInputChange(node, value = '') {
+  const inputTypes = [
+    window.HTMLInputElement,
+    window.HTMLSelectElement,
+    window.HTMLTextAreaElement,
+  ];
+
+  if (inputTypes.includes(node?.__proto__?.constructor)) {
+    const valueSetter = Object.getOwnPropertyDescriptor(node.__proto__, 'value').set;
+
+    valueSetter.call(node, value);
+
+    const event = new Event('input', { bubbles: true });
+
+    node.dispatchEvent(event);
+  }
+}
+
 async function handlerCoverLetter() {
     await delay(delayTimeMS);
 
@@ -21,7 +39,7 @@ async function handlerCoverLetter() {
     }
     else if (document.querySelector('[data-qa="vacancy-response-popup-form-letter-input"]')) {
         messageArea = document.querySelector('[data-qa="vacancy-response-popup-form-letter-input"]')
-        messageArea.value = coverLetter;
+        triggerInputChange(messageArea, coverLetter);
 
         var evt = document.createEvent('HTMLEvents');
         evt.initEvent('change', true, true);
