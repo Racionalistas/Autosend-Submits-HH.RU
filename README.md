@@ -1,4 +1,4 @@
-Поддержать: https://boosty.to/racionalus
+## Поддержать: https://boosty.to/racionalus
 
 # Документация по Скрипту
 
