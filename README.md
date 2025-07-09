@@ -14,7 +14,7 @@
 
 1. **Подготовка**: 
     - Установите расширение https://chromewebstore.google.com/detail/scripty-javascript-inject/milkbiaeapddfnpenedfgbfdacpbcbam 
-    - Установите скрипт https://scripty.abhisheksatre.com/#/share/script_mc7btte6y4jos4 или перекопируйте код вручную
+    - Установите скрипт https://scripty.abhisheksatre.com/#/share/script_mcw56tovypewqs или перекопируйте код вручную
 2. **Настройка**:
     - Зайдите на сайт https://scripty.abhisheksatre.com/#/ и кликните на установленный скрипт.
     - В переменную `coverLetter` вставьте текст вашего сопроводительного письма. **(!) Чтобы добавить переносы строк, пропишите два следующих символа:** ``\n``
