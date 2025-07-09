@@ -1,4 +1,5 @@
-## Поддержать: https://boosty.to/racionalus ![image](https://github.com/user-attachments/assets/11eaf5e7-6a25-4ea6-b19b-376ea4173b84)
+Поддержать: https://boosty.to/racionalus 
+![image](https://github.com/user-attachments/assets/11eaf5e7-6a25-4ea6-b19b-376ea4173b84)
 
 # Документация по Скрипту
 
