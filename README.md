@@ -3,6 +3,9 @@
 
 Поддержать: https://boosty.to/racionalus
 
+<img width="531" height="99" alt="image" src="https://github.com/user-attachments/assets/efa9a49e-05e3-4bc3-86b1-192bbdd92b48" />
+
+
 
 ## Возможности
 
